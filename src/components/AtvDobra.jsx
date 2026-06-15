@@ -1,5 +1,5 @@
 /*
-[ATIVIDADE DOBRA]
+[ATIVIDADE DOBRA],
 
 Crie e exporte por padrão um componente chamado "AtvDobra" que recebe um argumento "numero". 
 O componente deve exibir uma <View> contendo um <Text>, que vai exibir este número recebido como argumento, 

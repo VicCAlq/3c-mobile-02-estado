@@ -58,7 +58,7 @@ const estiloRoubado = StyleSheet.create({
 
 export default function AtvCumprimenta() {
 const [valorEscrito, setValorEscrito] = useState("")
-const [textin, setTextin] = useState("É um prazer lhe conhecer") 
+const [textin, setTextin] = useState("É um prazer lhe conhecer...") 
 
 
     return (
@@ -77,7 +77,7 @@ const [textin, setTextin] = useState("É um prazer lhe conhecer")
                     Salvar
                 </Text>
             </Pressable>
-            <Text style={estiloRoubado.texto}>{textin}</Text>
+            <Text style={estiloRoubado.texto}>É um prazer lhe conhecer {textin}</Text>
         </View>
     )
 }
