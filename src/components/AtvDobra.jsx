@@ -10,8 +10,8 @@ import { useState } from 'react'
 
 
 
-export default function AtvDobra() {
-  const [numero, setNumero] = useState(0)
+export default function AtvDobra({numero}) {
+  const [setNumero] = useState(0)
   function duplicar() {
     setNumero(numero * 2)
   }
