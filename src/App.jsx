@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import Placar from './components/Placar';
 import InputTexto from './components/InputTexto';
+import AtvDobra from './components/AtvDobra';
+import AtvCumprimenta from './components/AtvCumprimenta';
+
 
 export default function App() {
   return (
@@ -9,6 +12,11 @@ export default function App() {
       <Placar/>
       <InputTexto/>
       <StatusBar style="auto" />
+
+      <View>
+        <AtvDobra numero={2}></AtvDobra>
+        <AtvCumprimenta></AtvCumprimenta>
+      </View>
     </View>
   );
 }
