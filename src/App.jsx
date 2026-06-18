@@ -3,10 +3,12 @@ import { StyleSheet, View } from 'react-native';
 import Placar from './components/Placar';
 import InputTexto from './components/InputTexto';
 import AtvDobra from './components/AtvDobra';
+import AtvCumprimenta from './components/AtvCumprimenta';
 export default function App() {
   return (
     <View style={styles.container}>
       <AtvDobra/>
+      <AtvCumprimenta/>
       <Placar/>
       <InputTexto/>
       <StatusBar style="auto" />
