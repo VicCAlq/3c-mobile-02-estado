@@ -21,7 +21,29 @@ _________________________________
 */
 
 import { useState } from "react";
-import { Pressable,View,Text,TextInput} from "react-native";
+import { Pressable,View,Text,TextInput, StyleSheet} from "react-native";
+const estilo = StyleSheet.create
+({
+    view1:
+    {
+        alignItems: "center",
+        justifyContent: "center",
+        
+    },
+    view2:
+    {
+        flexDirection: "row",
+    },
+    pressable:
+    {
+        backgroundColor: "blue",
+        
+    },
+
+    texto:{
+        color: "white",
+    }
+})
 
 
 export default function AtvCumprimenta()
@@ -31,17 +53,22 @@ export default function AtvCumprimenta()
 
 
     return(
-        <View>
-            <Text>
+        <View style={estilo.view1}>
+            <Text style={estilo.texto}>
             {Texto}
             </Text>
-            <TextInput value={NOME}
-             onChangeText={setNOME}
-            placeholder="seu nome aqui"
-            />
 
-            <Pressable onPress={()=>setTexto("a"+{NOME})}>
-            </Pressable>
+            <View style={estilo.view2}>
+                <TextInput style={estilo.texto} value={NOME}
+                    onChangeText={setNOME}
+                    placeholder="seu nome aqui"
+                />
+
+                <Pressable style={estilo.pressable} onPress={() => setTexto("É um prazer lhe conhecer," + NOME)}>
+                    <Text>Salvar</Text>
+                </Pressable>
+            </View>
+           
         </View>
     )
 }
