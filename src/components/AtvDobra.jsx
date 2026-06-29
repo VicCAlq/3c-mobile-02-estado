@@ -45,7 +45,7 @@ const estilos = StyleSheet.create({
 })
 
 
-export default function AppAtvDobra(numero) {
+export default function AtvDobra(numero) {
 
 
   const [number, setNumber] = useState(2);
