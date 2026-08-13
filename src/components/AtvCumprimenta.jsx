@@ -19,3 +19,27 @@ _________________________________
 | É um prazer lhe conhecer...   |
 |_______________________________|
 */
+
+import { Pressable } from "react-native";
+import { View } from "react-native/types_generated/index";
+
+
+const styles = StyleSheet.Create({
+
+})
+
+export default function AtvCumprimenta(){
+     const [nome,setNome] = useState()
+     const [nomeConfirmado,setNomeConfirmado] = useState()
+
+    return(
+        <View>
+            <Text></Text>
+            <View>
+                <TextInput> </TextInput>
+                <Pressable></Pressable>
+            </View>
+            <Text></Text>
+        </View>
+    )
+}
