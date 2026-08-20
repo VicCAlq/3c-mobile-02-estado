@@ -7,3 +7,33 @@ Cada <Pressable> ao ser clicado, deve inserir na <View> abaixo um <Text> e um <T
 e substituir o conteúdo anterior dessa <View> de baixo dos botões.
 O texto digitado no <TextInput> ativado por um <Pressable> deve ser exibido no <Text> do outro <Pressable>, e vice-versa.
 */
+
+import { Pressable, View, Text, StyleSheet } from "react-native";
+
+const estilo = StyleSheet.create({
+    botaozinho: {
+        backgroundColor: "mediumpurple",
+        borderRadius:"20px",
+        maxWidth:"10vw" 
+    },
+    texto: {
+        color: "white",
+        fontSize:"20px"
+
+    },
+})
+
+export default function AtvBotaoAcaoExterna({acao})
+{
+    return(<View>
+        <Text style={estilo.texto}>
+            Clique abaixo
+        </Text>
+        <Pressable onPress={acao} style={estilo.botaozinho}>
+            <Text style={estilo.texto}>
+                Clique aqui
+            </Text>
+        </Pressable>
+    </View>)
+        
+}
