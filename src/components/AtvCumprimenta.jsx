@@ -20,26 +20,75 @@ _________________________________
 |_______________________________|
 */
 
-import { Pressable } from "react-native";
-import { View } from "react-native/types_generated/index";
+import React, { useState } from "react";
+import { View, Text, TextInput, Pressable, StyleSheet } from "react-native";
 
+export default function AtvCumprimenta() {
+  const [nome, setNome] = useState("");
+  const [nomeConfirmado, setNomeConfirmado] = useState("");
 
-const styles = StyleSheet.Create({
+  function aoClicarEmSalvar() {
+    setNomeConfirmado(nome);
+  }
 
-})
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titulo}>Olá, qual seu nome?</Text>
 
-export default function AtvCumprimenta(){
-     const [nome,setNome] = useState()
-     const [nomeConfirmado,setNomeConfirmado] = useState()
+      <View style={styles.linha}>
+        <TextInput
+          style={styles.input}
+          placeholder="Nome aqui"
+          value={nome}
+          onChangeText={setNome}
+        />
 
-    return(
-        <View>
-            <Text></Text>
-            <View>
-                <TextInput> </TextInput>
-                <Pressable></Pressable>
-            </View>
-            <Text></Text>
-        </View>
-    )
+        <Pressable style={styles.botao} onPress={aoClicarEmSalvar}>
+          <Text style={styles.textoBotao}>Salvar</Text>
+        </Pressable>
+      </View>
+
+      {nomeConfirmado !== "" && (
+        <Text style={styles.mensagem}>
+          É um prazer lhe conhecer, {nomeConfirmado}
+        </Text>
+      )}
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    alignItems: "center",
+  },
+  titulo: {
+    fontSize: 18,
+    marginBottom: 10,
+  },
+  linha: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 15,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: "#999",
+    padding: 8,
+    width: 140,
+    marginRight: 8,
+    borderRadius: 4,
+  },
+  botao: {
+    backgroundColor: "#007AFF",
+    padding: 10,
+    borderRadius: 4,
+  },
+  textoBotao: {
+    color: "#FFF",
+    fontWeight: "bold",
+  },
+  mensagem: {
+    fontSize: 16,
+  },
+});
